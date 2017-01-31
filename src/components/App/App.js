@@ -18,6 +18,7 @@ class App extends React.Component {
     return (
       <div className="todo-app">
         <TodoDashboard
+          todos={this.state.todos}
           loadSamples={this.loadSamples}
         />
       </div>

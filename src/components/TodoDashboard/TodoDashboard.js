@@ -2,10 +2,27 @@ import React from 'react';
 import AddTodoForm from '../AddTodoForm/AddTodoForm';
 
 class TodoDashboard extends React.Component {
+  renderTodos = (key) => {
+    const todo = this.props.todos[key];
+    return(
+      <div
+        className="todo-item"
+        key={key}>
+        {todo.description}
+      </div>
+    )
+  }
+
   render() {
     return (
       <div className="todo-dashboard">
         <AddTodoForm/>
+        <ul className="list-of-todos">
+          {
+            Object.keys(this.props.todos)
+            .map(this.renderTodos)
+          }
+        </ul>
         <button
         className="load-samples"
         onClick={this.props.loadSamples}
