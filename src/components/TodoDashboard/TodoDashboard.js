@@ -4,7 +4,15 @@ import AddTodoForm from '../AddTodoForm/AddTodoForm';
 class TodoDashboard extends React.Component {
   render() {
     return (
-      <AddTodoForm/>
+      <div className="todo-dashboard">
+        <AddTodoForm/>
+        <button
+        className="load-samples"
+        onClick={this.props.loadSamples}
+        >
+        Load Sample Todos
+      </button>
+      </div>
     );
   }
 }

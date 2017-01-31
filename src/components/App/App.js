@@ -1,12 +1,25 @@
 import React from 'react';
 import TodoDashboard from '../TodoDashboard/TodoDashboard';
 import './App.css';
+import sampleTodos from '../../sample-todos';
 
 class App extends React.Component {
+  state = {
+    todos: {}
+  }
+
+  loadSamples = () => {
+    this.setState({
+      todos: sampleTodos
+    });
+  }
+
   render() {
     return (
       <div className="todo-app">
-        <TodoDashboard />
+        <TodoDashboard
+          loadSamples={this.loadSamples}
+        />
       </div>
     );
   }
