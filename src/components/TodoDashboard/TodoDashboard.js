@@ -34,4 +34,10 @@ class TodoDashboard extends React.Component {
   }
 }
 
+TodoDashboard.propTypes = {
+  todos: React.PropTypes.object.isRequired,
+  addTodo: React.PropTypes.func.isRequired,
+  loadSamples: React.PropTypes.func.isRequired,
+}
+
 export default TodoDashboard;

@@ -29,4 +29,8 @@ class AddTodoForm extends React.Component {
   }
 }
 
+AddTodoForm.propTypes = {
+  addTodo: React.PropTypes.func.isRequired,
+}
+
 export default AddTodoForm;
