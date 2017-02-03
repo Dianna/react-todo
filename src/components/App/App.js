@@ -14,12 +14,19 @@ class App extends React.Component {
     });
   }
 
+  addTodo = (todo) => {
+    const todos = {...this.state.todos};
+    todos[todo.created] = todo;
+    this.setState({ todos });
+  }
+
   render() {
     return (
       <div className="todo-app">
         <TodoDashboard
           todos={this.state.todos}
           loadSamples={this.loadSamples}
+          addTodo={this.addTodo}
         />
       </div>
     );

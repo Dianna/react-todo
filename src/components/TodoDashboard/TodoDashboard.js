@@ -16,7 +16,7 @@ class TodoDashboard extends React.Component {
   render() {
     return (
       <div className="todo-dashboard">
-        <AddTodoForm/>
+        <AddTodoForm addTodo={this.props.addTodo}/>
         <ul className="list-of-todos">
           {
             Object.keys(this.props.todos)
